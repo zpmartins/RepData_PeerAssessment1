@@ -721,7 +721,8 @@ axis(2, at=c(0,1), lab=c(&quot;True&quot;,&quot;False&quot;))
 </tr>
 </tbody></table>
 
-<pre><code class="r">fixedData &lt;- fData
+<pre><code class="r">### The missing data will be filled with the mean of the step number for the entire sample (without missing data)
+fixedData &lt;- fData
 fixedData$steps[is.na(fixedData$steps)] &lt;- mean(fData$steps, na.rm = TRUE)
 
 fixedData %&gt;% 

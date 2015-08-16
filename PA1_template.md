@@ -249,6 +249,7 @@ kable(naSteps[naSteps$isNA,])
 
 
 ```r
+### The missing data will be filled with the mean of the step number for the entire sample (without missing data)
 fixedData <- fData
 fixedData$steps[is.na(fixedData$steps)] <- mean(fData$steps, na.rm = TRUE)
 
